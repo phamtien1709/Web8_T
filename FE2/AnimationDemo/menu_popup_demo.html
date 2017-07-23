@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <title>Menu demo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('body').on('click', '.popup_icon', function(){
+        $(this).parent('.popup_wrapper').toggleClass('active');
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+
+      <div class="popup_wrapper">
+        <div class="popup_icon">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <section class="popup_content">
+          <nav class="nav">
+            <!-- CONTENT HERE -->
+            <button class="btn switch_color">Switch Color</button>
+            <button class="btn animate_color">Animate Color</button>
+          </nav>
+        </section>
+      </div>
+
+
+    </nav>
+  </header>
+
+
+
+  <section class="page_block page_title">
+    <h1>Animations</h1>
+    <h3><em>... are beautiful.</em></h3>
+  </section>
+</body>
+</html>

@@ -1,0 +1,59 @@
+p {
+  color: red;
+}
+
+h1 {
+  font-family: "MS Comic San", "Arial", "san-serif";
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: normal;
+  font-style: italic;
+}
+
+#top {
+  text-decoration: line-through;
+}
+
+.green_background.white_text {
+  background-color: green;
+  color: red;
+}
+
+[href]{
+  font-size: 60px;
+}
+
+[alt="Trinnie Xíu"]{
+  border-radius: 100%;
+}
+
+ol li{
+  text-transform: uppercase;
+}
+
+ol > li {
+  text-transform: lowercase;
+}
+
+li:hover{
+  background-color: yellow;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+a:active{
+  color: red;
+}
+
+input:focus{
+  border-width: 3px;
+  border-style: double;
+  border-color: red blue;
+}
+
+.required_field:after{
+  content: "*";
+  color: red;
+}

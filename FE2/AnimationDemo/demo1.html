@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <title>Animation Demo 1</title>
+  <style>
+    h1{
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 50px;
+    }
+    h1:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      height: 4px;
+      background: black;
+      display: block;
+      animation: 0.3s header_out;
+    }
+    h1:hover:after{
+      right: 0;
+      animation: 0.3s header_in;
+    }
+
+    .linear:after{
+      animation-timing-function: linear;
+    }
+    .ease:after{
+      animation-timing-function: ease-in;
+    }
+    .ease:hover:after{
+      animation-timing-function: ease-out;
+    }
+    @keyframes header_in {
+      from{
+        right: 100%;
+        left: 0;
+      }
+      to{
+        right: 0;
+        left: 0;
+      }
+    }
+    @keyframes header_out {
+      from{
+        right: 0;
+        left: 0;
+      }
+      to{
+        right: 0;
+        left: 100%;
+      }
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      document.body.removeAttribute("class");
+    }
+  </script>
+</head>
+<body>
+  <section><h1 class="ease">Big fat header 1</h1></section>
+  <section><h1 class="linear">Big fat header 2</h1></section>
+</body>
+</html>

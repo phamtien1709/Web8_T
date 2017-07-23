@@ -1,0 +1,198 @@
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+html{
+  font: 10px/1.5 "Tahoma", sans-serif;
+  background: #263238;
+  color: #ffffff;
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.page_block{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+.no_animate{
+  transition: all 0s !important;
+}
+
+header{
+  padding: 10px 40px;
+  background: #37474f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* POPUP BEGINS */
+
+.popup_wrapper{
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  position: relative;
+}
+
+.popup_icon{
+  cursor: pointer;
+  z-index: 2;
+}
+
+.popup_icon div{
+  height: 6px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.popup_icon div:nth-child(2){
+  margin: 6px auto;
+  z-index: 2;
+}
+
+.popup_wrapper.active .popup_icon div:nth-child(1){
+  transform: translate(0, 12px) rotate(-315deg) ;
+  background: #ffffff;
+}
+
+.popup_wrapper.active .popup_icon div:nth-child(3){
+  background: #ffffff;
+  transform: translate(0, -12px) rotate(-225deg);
+}
+
+.popup_wrapper.active .popup_icon div:nth-child(2){
+  opacity: 0;
+  height: 30px;
+  margin: -6px auto;
+  transform: rotate(-180deg);
+}
+
+.popup_content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: #673ab7;
+  opacity: 0;
+  z-index: 1;
+  transition: all .25s ease-out, height .25s ease-out .05s;
+  pointer-events: none;
+}
+
+.popup_wrapper.active .popup_content{
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  transition: all .25s ease-in, width .25s ease-in .05s;
+  pointer-events: all;
+}
+
+/* POPUP ENDS */
+
+.page_title{
+  padding-top: 20vh;
+}
+
+.page_title h1{
+  color: #263238;
+  font-size: 6rem;
+  text-shadow:  1px 1px 0 #ff4081,
+                -1px -1px 0 #ff4081,
+                1px -1px 0 #ff4081,
+                -1px 1px 0 #ff4081,
+                1px 0px 0 #ff4081,
+                0px 1px 0 #ff4081,
+                -1px 0px 0 #ff4081,
+                0px -1px 0 #ff4081;
+  margin: 0;
+}
+
+.icon_arrow{
+  cursor: pointer;
+  background: #ff4081;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.icon_arrow div{
+  background: #ffffff;
+  height: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.icon_arrow div:nth-child(1){
+  width: 15px;
+  transform-origin: right;
+  transform: translate(13px, 12px) rotate(45deg);
+}
+
+.icon_arrow div:nth-child(2){
+  margin: 6px 0;
+}
+
+.icon_arrow div:nth-child(3){
+  width: 15px;
+  transform-origin: right;
+  transform: translate(13px, -12px) rotate(-45deg);
+}
+
+.icon_arrow_down{
+  transform: rotate(90deg);
+}
+
+
+.nav{
+  display: block;
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn,
+.btn:hover:active{
+  background: transparent;
+  border: 1px solid white;
+  width: 100%;
+  color: white;
+  padding: 5px 7px;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn:hover{
+  color: black;
+  background: white;
+}
+
+.popup_wrapper.active .switch_color{
+  transition: opacity 1s 0.35s;
+  opacity: 1;
+}
+
+.popup_wrapper.active .animate_color{
+  transition: opacity 1s 0.45s;
+  opacity: 1;
+}

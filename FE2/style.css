@@ -1,0 +1,6 @@
+.non-static{
+  width: 900px;
+  height: 900px;
+  background: blue;
+  position: relative;
+}
