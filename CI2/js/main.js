@@ -49,7 +49,6 @@ var create = function(){
       cooldown  : 0.3
     })
   );
-
   Nakama.players.push(
     new ShipController(400,400, "Spaceship1-Partner.png",{
       up        : Phaser.Keyboard.W,

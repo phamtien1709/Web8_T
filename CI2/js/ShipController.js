@@ -3,7 +3,7 @@ class ShipController {
     this.sprite = Nakama.playerGroup.create(
       x,
       y,
-      "assets",
+      'assets',
       spriteName
     );
     this.sprite.anchor = new Phaser.Point(0.5, 0.5);
@@ -75,11 +75,4 @@ class ShipController {
       new Phaser.Point(-4, -10)
     );
   }
-
-
-
-
-
-
-
 }
